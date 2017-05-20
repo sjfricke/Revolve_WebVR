@@ -1,0 +1,108 @@
+    <!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Frickality revolveGL</title>
+ 
+      <style>
+      
+          .y_Top { margin-bottom: 400px; }
+          
+      </style>
+    
+    
+  </head>
+
+  <body>
+      <div>  
+         
+      </div>
+      <div id="drawingSection" style="display: block;">        
+           Relove 3D Calculus Helper - By: Spencer Fricke - CEO of Frickality 
+          <br>
+          Revolves around only the Y axis at the moment
+          <br><br>
+          <div style="display: flex;">
+              <div>
+                  Origin (0,0)
+                  <canvas id="drawCanvas" width="500" height="500" style="border: 1px solid black"></canvas>
+              </div>
+              <div style="padding-left: 10px;">     
+                  (50,50)
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  ^<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>Y   <br>
+                  &nbsp;&nbsp;&nbsp;X -------- >
+              </div>
+          </div>
+          <br>
+          <div>
+              <button id="clearButton">CLEAR GRID</button>
+              <button id="viewButton">VIEW IN 3D</button>
+              <button id="closePathButton">CLOSE PATH</button>
+              <br>
+              <br>
+              Type a function in: Y = <input type="text" id="functionInput"> <button id="functionButton">Graph</button>
+              <br>
+              Examples:<br>
+              x + 2 <br>
+              x * 2 <br>
+              x / 2 <br>
+              Math.pow(x,2) <br>
+              Math.sin(x) <br>
+<!--
+              How many divisons in rotation
+              <select id="divisonSelect">
+                <option value="25">25</option>
+                <option value="50" selected="selected">50</option>
+                <option value="75">75</option>
+              </select>
+-->
+          </div>
+      </div>
+      
+      
+      <div id="threejsSection" style="display: none; font-size: 20px">
+               
+      </div><br>
+      
+      <button style="display: none; font-size: 22px" id="wireframeButton">Wireframe</button>
+      <br>
+       
+      
+<!--
+      <div id="drawSectionButtons" style="display: block">
+          Enter code to load model
+          <input type="number" id="loadNumber">
+          <button id="loadButton" style="background: blue; color:white;">Load Model</button>
+      </div>
+-->
+      
+      <div id="threejsSectionButtons" style="display: none">
+          &bull;<b>Orbit</b> - left mouse / touch: one finger move<br>
+      &bull;<b>Zoom</b> - middle mouse, or mousewheel / touch: two finger spread or squish<br>
+      &bull;<b>Pan</b> - right mouse, or arrow keys / touch: three finter swipe<br>    
+<!--         <button id="saveButton" style="background: green; color:white;">SAVE MODEL</button>-->
+          <button id="unviewButton" style="background: blue; color:white;">BACK TO DRAWING</button>
+      </div>
+      
+    <script>
+        var divisions = 50; 
+        var onecall = false;
+    </script>
+    <script src='https://ajax.googleapis.com/ajax/libs/threejs/r73/three.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src='OrbitControl.js'></script>
+    <script src="js/vector2.js"></script>
+    <script src="js/drawRadian.js"></script>
+    <script src="js/main.js"></script>
+
+    
+    
+    
+  </body>
+</html>
